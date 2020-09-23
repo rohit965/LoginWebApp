@@ -1,6 +1,5 @@
 pipeline {
 	agent any 
-}
 	stages {
 		stage('Compile & Package') {
 			steps {
@@ -8,3 +7,4 @@ pipeline {
 				}
 		}
 	}
+}
