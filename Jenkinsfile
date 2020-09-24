@@ -2,7 +2,7 @@ pipeline {
 	agent any 
 	environment {
 		TOMCAT_CRED = credentials('tomcat')
-		TOMCAT_HOST = 10.128.0.50
+		//TOMCAT_HOST = 10.128.0.50
 		TOMCAT_PORT = 8080
 		ARTIFACT = WebApp.war
 		CONTEXT_PATH = WebApp
