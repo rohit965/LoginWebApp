@@ -4,7 +4,7 @@ pipeline {
 		TOMCAT_CRED = credentials('tomcat')
 		//TOMCAT_HOST = 10.128.0.50
 		TOMCAT_PORT = 8080
-		ARTIFACT = 'target/WebApp.war'
+		ARTIFACT = 'WebApp.war'
 		CONTEXT_PATH = 'WebApp'
 	}
 	stages {
@@ -16,7 +16,7 @@ pipeline {
 		stage('Deploy to Standalone Tomcat Server') {
 			steps {
 				echo "username : $TOMCAT_CRED_USR password: $TOMCAT_CRED_PSW"
-				sh 'curl -v -u ${TOMCAT_CRED_USR}:${TOMCAT_CRED_PSW} -T ${ARTIFACT} http://10.128.0.50:${TOMCAT_PORT}/manager/text/deploy?path=//${CONTEXT_PATH}'
+				sh 'curl -T ${ARTIFACT} http://${TOMCAT_CRED_USR}:${TOMCAT_CRED_PSW}@10.128.0.50:${TOMCAT_PORT}/manager/text/deploy?path=//${CONTEXT_PATH}'
 
 			}
 		}
