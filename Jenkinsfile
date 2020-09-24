@@ -17,7 +17,7 @@ pipeline {
 			steps {
 				echo "username : $TOMCAT_CRED_USR password: $TOMCAT_CRED_PSW"
 				sh 'pwd'
-				sh 'curl -T ${ARTIFACT} http://${TOMCAT_CRED_USR}:${TOMCAT_CRED_PSW}@10.128.0.50:${TOMCAT_PORT}/manager/text/deploy?path=//${CONTEXT_PATH}'
+				sh 'curl -T ${ARTIFACT} http://${TOMCAT_CRED_USR}:${TOMCAT_CRED_PSW}@10.128.0.50:${TOMCAT_PORT}/manager/text/deploy?path=/${CONTEXT_PATH}'
 
 			}
 		}
