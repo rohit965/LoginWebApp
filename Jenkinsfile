@@ -4,6 +4,7 @@ pipeline {
 		TOMCAT_CRED = credentials('tomcat')
 		TOMCAT_HOST = 10.128.0.50
 		TOMCAT_PORT = 8080
+		CONTEXT_PATH = WebApp
 	}
 	stages {
 		stage('Compile & Package') {
