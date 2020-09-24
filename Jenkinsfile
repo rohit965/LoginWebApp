@@ -11,7 +11,7 @@ pipeline {
 		}
 		stage('Displaying credentials') {
 			steps {
-				echo "username : $TOMCAT_CRED_USER password: $TOMCAT_CRED_PSW"
+				echo "username : $TOMCAT_CRED_USR password: $TOMCAT_CRED_PSW"
 			}
 		}
 	}
