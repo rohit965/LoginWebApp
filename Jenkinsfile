@@ -4,7 +4,7 @@ pipeline {
 		TOMCAT_CRED = credentials('tomcat')
 		//TOMCAT_HOST = 10.128.0.50
 		TOMCAT_PORT = 8080
-		ARTIFACT = '/var/lib/jenkins/workspace/webapp/target/WebApp.war'
+		ARTIFACT = './target/WebApp.war'
 		CONTEXT_PATH = 'WebApp'
 	}
 	stages {
