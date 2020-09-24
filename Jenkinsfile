@@ -3,6 +3,7 @@ pipeline {
 	environment {
 		TOMCAT_CRED = credentials('tomcat')
 		TOMCAT_HOST = 10.128.0.50
+		TOMCAT_PORT = 8080
 	}
 	stages {
 		stage('Compile & Package') {
