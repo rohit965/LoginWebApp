@@ -13,7 +13,8 @@
     <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+	    <version>2.5</version>
+	    <scope>provided</scope>
     </dependency>
     <dependency>
             <groupId>mysql</groupId>
@@ -42,7 +43,18 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M1</version></plugin>
+	<version>3.0.0-M1</version>
+      </plugin>
+
+      <plugin>
+	<groupId>org.apache.tomcat.maven</groupId>
+	<artifactId>tomcat7-maven-plugin</artifactId>
+	<version>2.1</version>
+	<!--	<scope>provided</scope>
+		<configuration>
+			<path>/LoginWebApp</path>
+		</configuration> -->
+      </plugin>
     </plugins>
     </build>
 </project>

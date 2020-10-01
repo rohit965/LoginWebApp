@@ -1,13 +1,13 @@
 <%@ page import="java.sql.*"%>
 <%
-    String userName = request.getParameter("uname");   
+    String userName = request.getParameter("userName");   
     String password = request.getParameter("password");
     Class.forName("com.mysql.jdbc.Driver");
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jwt",
             "root", "mukesh");
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from user where userName='" + userName + "' and password='" +password + "'");
+    rs = st.executeQuery("select * from USER where username='" + userName + "' and password='" +password + "'");
     if (rs.next()) {
         session.setAttribute("userid", userName);
         response.sendRedirect("success.jsp");
